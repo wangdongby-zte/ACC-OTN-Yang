@@ -242,6 +242,7 @@ module acc-devm {
         leaf operational-state {
             mandatory true;
             type operational-state;
+            config false;
             description "Operational state";
         }
         leaf admin-state {
