@@ -143,6 +143,11 @@ module acc-protection-group {
                 description
                     "WTR";
             }
+            enum lockout {
+                value 7;
+                description
+                    "lockout of protection";
+            }
         }
         description
             "switch reason";
