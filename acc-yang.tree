@@ -185,7 +185,6 @@ module: acc-devm
   |  |     +--rw ntp-version?   string
   |  +--rw gate-way1              inet:ipv4-address
   |  +--rw gate-way2?             inet:ipv4-address
-  |  +--rw me-time?               yang:date-and-time
   |  +--ro eq*                    -> /eqs/eq/name
   +--rw ptps
   |  +--rw ptp* [name]
@@ -433,42 +432,23 @@ module: acc-sdh
        |  |  +---w uni-ptp-name          string
        |  |  +---w vc-type               switch-type
        |  |  +---w a-ctp-mapping-path    string
+       |  +---w sdh-nni
+       |  |  +---w sdh-type                      sdh-signal-type
+       |  |  +---w z-ctp-mapping-path            string
+       |  |  +---w sdh-type-protect?             sdh-signal-type
+       |  |  +---w z-ctp-mapping-path-protect?   string
        |  +---w primary-nni
        |  |  +---w nni-ptp-name?         string
        |  |  +---w nni-ts-detail?        string
        |  |  +---w adaptation-type?      adaptation-type
        |  |  +---w client-signal-type?   identityref
        |  |  +---w switch-capability?    identityref
-       |  |  +---w sdh-nni
-       |  |     +---w sdh-type?             sdh-signal-type
-       |  |     +---w z-ctp-mapping-path?   string
        |  +---w secondary-nni
-       |  |  +---w nni-ptp-name?         string
-       |  |  +---w nni-ts-detail?        string
-       |  |  +---w adaptation-type?      adaptation-type
-       |  |  +---w client-signal-type?   identityref
-       |  |  +---w switch-capability?    identityref
-       |  |  +---w sdh-nni
-       |  |     +---w sdh-type?             sdh-signal-type
-       |  |     +---w z-ctp-mapping-path?   string
-       |  +---w primary-nni2
-       |  |  +---w nni-ptp-name?         string
-       |  |  +---w nni-ts-detail?        string
-       |  |  +---w adaptation-type?      adaptation-type
-       |  |  +---w client-signal-type?   identityref
-       |  |  +---w switch-capability?    identityref
-       |  |  +---w sdh-nni
-       |  |     +---w sdh-type?             sdh-signal-type
-       |  |     +---w z-ctp-mapping-path?   string
-       |  +---w secondary-nni2
        |     +---w nni-ptp-name?         string
        |     +---w nni-ts-detail?        string
        |     +---w adaptation-type?      adaptation-type
        |     +---w client-signal-type?   identityref
        |     +---w switch-capability?    identityref
-       |     +---w sdh-nni
-       |        +---w sdh-type?             sdh-signal-type
-       |        +---w z-ctp-mapping-path?   string
        +--ro output
           +--ro connection
           |  +--ro name?                  string
