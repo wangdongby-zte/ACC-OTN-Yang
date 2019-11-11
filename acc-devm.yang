@@ -692,4 +692,12 @@ module acc-devm {
                 }
          }
     }
+	
+	rpc get-object-time {
+        output {
+            leaf date-time {
+                type yang:date-and-time;
+                }
+        }
+    }
 }
